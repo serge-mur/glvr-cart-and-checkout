@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Gulliver Checkout</title>
+    <link rel="stylesheet" href="css/minireset.min.css">
+    <link rel="stylesheet" href="fonts/stylesheet.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/checkout.css">
+</head>
+<body>
+
+    <header class="header">header</header>
+
+    <main class="cart">
+
+        <div class="true-container">
+            <div class="cart__wrapper">
+
+                <div class="cart__main">
+                    
+                    <h1 class="cart__title">
+                        <a href="#" class="cart__title-back">
+                            <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13 20L7 14.5L13 9" stroke="#52525B"/>
+                            </svg>
+                        </a>
+                        <span>Оформление заказа</span>
+                    </h1>
+
+                    <div class="cart__person person">
+                        
+                        <div class="person__title subtitle">Получатель</div>
+                        
+                        <div class="person__info">
+                            <div class="person__grid">
+                                <div class="cart-input">
+                                    <div class="cart-input__wrapper">
+                                        <input type="text" name="phone" id="phone" class="cart-input__input" placeholder="Номер телефона" required>
+                                        <label for="phone" class="cart-input__label">Номер телефона *</label>                                    
+                                    </div>
+                                    <div class="cart-input__err">Поле обязательно для заполнения</div>
+                                </div>                            
+                                <div class="cart-input">
+                                    <div class="cart-input__wrapper">
+                                        <input type="text" name="email" id="email" class="cart-input__input" placeholder="Ваш E-mail" required>
+                                        <label for="email" class="cart-input__label">Ваш E-mail *</label>                                    
+                                    </div>
+                                    <div class="cart-input__err">Поле обязательно для заполнения</div>
+                                </div>
+
+                                <div class="cart-input">
+                                    <div class="cart-input__wrapper">
+                                        <input type="text" name="first_name" id="first_name" class="cart-input__input" placeholder="Имя" required>
+                                        <label for="first_name" class="cart-input__label">Имя *</label>                                    
+                                    </div>
+                                    <div class="cart-input__err">Поле обязательно для заполнения</div>
+                                </div>
+                                <div class="cart-input">
+                                    <div class="cart-input__wrapper">
+                                        <input type="text" name="second_name" id="second_name" class="cart-input__input" placeholder="Фамилия" required>
+                                        <label for="second_name" class="cart-input__label">Фамилия *</label>                                    
+                                    </div>
+                                    <div class="cart-input__err">Поле обязательно для заполнения</div>
+                                </div>                                
+                            </div>
+                            <div class="person__checkbox">
+                                <div class="cart-checkbox">
+                                    <input type="checkbox" id="subscribe" class="cart-checkbox__input">
+                                    <label for="subscribe" class="cart-checkbox__label">Подписаться на рассылки</label>
+                                </div>
+                                <div class="cart-checkbox">
+                                    <input type="checkbox" id="other_person" class="cart-checkbox__input">
+                                    <label for="other_person" class="cart-checkbox__label">Получать буду не я</label>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cart__delivery delivery">
+                        <div class="delivery__title subtitle">Способ получения</div>
+                        <div class="delivery__change-wrapper">
+                            <div class="delivery__change-box">
+                                <div class="change-box__item">
+                                    <input type="radio" id="courier" class="change-box__input" name="delivery" value="courier">
+                                    <label for="courier" class="change-box__label">Доставка курьером</label>                                
+                                </div>
+                                <div class="change-box__item">
+                                    <input type="radio" id="pickup" class="change-box__input" name="delivery" value="pickup">
+                                    <label for="pickup" class="change-box__label">Самовывоз из пункта выдачи</label>                                
+                                </div>
+                            </div>
+                            <div class="delivery__change-adress change-adress">
+                                <div class="change-adress__title">Адрес доставки:</div>
+                                <div class="change-adress__wrapper">
+                                    <div class="change-adress__adress">Нижний Новгород, ул. Центральный проезд Хорошевского Серебряного Бора, д. 14, кв. 18</div>
+                                    <button class="change-adress__btn">Изменить</button>
+                                </div>
+                            </div>                            
+                        </div>
+
+                        <button class="find-address">
+                            <svg class="sprite20"><use xlink:href="img/sprites.svg#marker"></use></svg>
+                            <span>Определить мой адрес</span>
+                        </button>
+
+                        <div class="delivery__grid">
+                            <div class="cart-input">
+                                <div class="cart-input__wrapper">
+                                    <input type="text" name="city" id="city" class="cart-input__input" placeholder="Город" required>
+                                    <label for="city" class="cart-input__label">Город *</label>                                    
+                                </div>
+                                <div class="cart-input__err">Поле обязательно для заполнения</div>
+                            </div>                            
+                            <div class="cart-input">
+                                <div class="cart-input__wrapper">
+                                    <input type="text" name="street" id="street" class="cart-input__input" placeholder="Улица" required>
+                                    <label for="street" class="cart-input__label">Улица *</label>                                    
+                                </div>
+                                <div class="cart-input__err">Поле обязательно для заполнения</div>
+                            </div>
+
+                            <div class="cart-input">
+                                <div class="cart-input__wrapper">
+                                    <input type="text" name="house" id="house" class="cart-input__input" placeholder="Дом" required>
+                                    <label for="house" class="cart-input__label">Дом *</label>                                    
+                                </div>
+                                <div class="cart-input__err">Поле обязательно для заполнения</div>
+                            </div>
+                            <div class="cart-input">
+                                <div class="cart-input__wrapper">
+                                    <input type="text" name="flat" id="flat" class="cart-input__input" placeholder="Квартира" required>
+                                    <label for="flat" class="cart-input__label">Квартира *</label>                                    
+                                </div>
+                                <div class="cart-input__err">Поле обязательно для заполнения</div>
+                            </div> 
+                            <textarea class="cart-textarea" id="comment" name="comment" rows="5" placeholder="Комментарий для курьера"></textarea>                               
+                        </div>
+
+                        <div class="delivery__change-courier">
+                            <div class="change-card">
+                                <input id="delivery_courier1" type="radio" name="courierType" class="change-card__input" value="" checked="">
+                                <label for="delivery_courier1" class="change-card__label">
+                                    <div class="change-card__top">
+                                        <div class="change-card__name">Курьером Dalli</div>
+                                        <div class="change-card__price">300₽</div>
+                                    </div>
+                                    <div class="change-card__bottom">
+                                        <div class="change-card__option change-card__option_period">от 2х дней</div>
+                                        <div class="change-card__option change-card__option_return">Возврат в течении 14 дней</div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="change-card">
+                                <input id="delivery_courier2" type="radio" name="courierType" class="change-card__input" value="" checked="">
+                                <label for="delivery_courier2" class="change-card__label">
+                                    <div class="change-card__top">
+                                        <div class="change-card__name">Курьером СДЭК</div>
+                                        <div class="change-card__price">Бесплатно</div>
+                                    </div>
+                                    <div class="change-card__bottom">
+                                        <div class="change-card__option change-card__option_period">от 2х дней</div>
+                                        <div class="change-card__option change-card__option_return">Возврат в течении 14 дней</div>
+                                    </div>
+                                </label>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="delivery__date-time date-time">
+                        <div class="date-time__title subtitle">Дата и время доставки</div>
+                        <div class="date-time__change">
+                            <div class="dropdown">
+                                <div class="dropdown__button">Дата</div>
+                                <div class="dropdown__content">
+                                    <div class="dropdown__item">27.12.2024, Понедельник</div>
+                                    <div class="dropdown__item dropdown__item_active">28.12.2024, Вторник</div>
+                                    <div class="dropdown__item">29.12.2024, Среда</div>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <div class="dropdown__button">Время</div>
+                                <div class="dropdown__content">
+                                    <div class="dropdown__item">с 9:00 до 13:00</div>
+                                    <div class="dropdown__item">с 10:00 до 17:00</div>
+                                    <div class="dropdown__item">с 11:00 до 15:00</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="delivery__payment payment">
+                        <div class="payment__title subtitle">Оплата</div>
+                        <div class="payment__change">
+                            <div class="change-card">
+                                <input id="payment_1" type="radio" name="payment" class="change-card__input" value="" checked="">
+                                <label for="payment_1" class="change-card__label">
+                                    <div class="change-card__top">
+                                        <div class="change-card__name">Онлайн</div>
+                                        <div class="change-card__logo"></div>
+                                    </div>
+                                    <div class="change-card__bottom">
+                                        <div class="change-card__info">Оплата на сайте</div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="change-card">
+                                <input id="payment_2" type="radio" name="payment" class="change-card__input" value="" checked="">
+                                <label for="payment_2" class="change-card__label">
+                                    <div class="change-card__top">
+                                        <div class="change-card__name">Яндекс Пэй</div>
+                                        <div class="change-card__logo">
+                                            <img src="img/ya_pay_logo.svg" alt="">
+                                            <div class="popover">  
+                                                <div class="popover__title">
+                                                    <svg class="sprite20"><use xlink:href="img/sprites.svg#question"></use></svg>    
+                                                </div>
+                                                <div class="popover__content">недоступна услуга частичного выкупа</div>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="change-card__bottom">
+                                        <div class="change-card__info"><img src="img/ya_plus_logo.svg" alt=""><span>2184 балла плюса</span></div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="change-card">
+                                <input id="payment_3" type="radio" name="payment" class="change-card__input" value="" checked="">
+                                <label for="payment_3" class="change-card__label">
+                                    <div class="change-card__top">
+                                        <div class="change-card__name">Яндекс Сплит</div>
+                                        <div class="change-card__logo">
+                                            <img src="img/split_logo.svg" alt="">
+                                            <div class="popover">  
+                                                <div class="popover__title">
+                                                    <svg class="sprite20"><use xlink:href="img/sprites.svg#question"></use></svg>    
+                                                </div>
+                                                <div class="popover__content">недоступна услуга частичного выкупа</div>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="change-card__bottom">
+                                        <div class="change-card__info"><img src="img/split_value.svg" alt=""></div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="change-card">
+                                <input id="payment_4" type="radio" name="payment" class="change-card__input" value="" checked="">
+                                <label for="payment_4" class="change-card__label">
+                                    <div class="change-card__top">
+                                        <div class="change-card__name">При получении</div>
+                                        <div class="change-card__logo"></div>
+                                    </div>
+                                    <div class="change-card__bottom">
+                                        <div class="change-card__info">Наличными или картой</div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="cart__total total">
+
+                    <div class="total__list">
+                        <div class="total__item total__item_title">
+                            <div class="total__name">Итого</div>
+                            <div class="total__value">24 657 ₽</div>
+                        </div>
+                        <div class="total__item">
+                            <div class="total__name">2 товара на сумму</div>
+                            <div class="total__value">26 157 ₽</div>
+                        </div>
+                        <div class="total__item-wrapper">
+                            <div class="total__item">
+                                <div class="total__name total__name-btn">Ваша скидка</div>
+                                <div class="total__value">-1 500 ₽</div>
+                            </div>
+                            <div class="total__item-content">
+                                <div class="total__item">
+                                    <div class="total__name">Акция 1+1</div>
+                                    <div class="total__value">-1 000 ₽</div>
+                                </div>
+                                <div class="total__item">
+                                    <div class="total__name">Авторизированный пользователь</div>
+                                    <div class="total__value">-500 ₽</div>
+                                </div>
+                            </div>
+                        </div>    
+                        <div class="total__item">
+                            <div class="total__name">Доставка</div>
+                            <div class="total__value">Бесплатно</div>
+                        </div>
+                        <div class="total__item total__item_total">
+                            <div class="total__name">Итого</div>
+                            <div class="total__value">24 657 ₽</div>
+                        </div>
+                    </div>
+
+                    <div class="promocode">
+                        <input type="text" class="promocode__input" value="SALE15">
+                        <button class="promocode__btn-apply">Применить</button>
+                    </div>
+
+                    <div class="certificate">
+                        <input type="text" class="certificate__input" placeholder="Подарочный сертификат">
+                        <button class="promocode__btn-close"><svg class="sprite20"><use xlink:href="img/sprites.svg#close"></use></svg></button>
+                    </div>
+
+                    <button class="total__submit-btn" disabled>Оформить заказ</button>
+
+                    <div class="total__offer-text">
+                        Нажимая «Оформить заказ», Вы подтверждаете, что ознакомились с <a href="#">Условиями программы лояльности Gulliver Club</a>, <a href="#">Политикой Организатора программы об обработке персональных данных</a>, согласны стать участником программы лояльности и <a href="#">даете Организатору согласие на обработку Ваших персональных данных</a>.
+                    </div>
+
+                    <div style="display: flex;flex-direction: column;gap: 10px;">
+                        <p>modals</p>
+                        <a href="javascript:void(0)" class="offcanvas-link" data-target="select-address">Адресс доставки</a>                        
+                        <a href="javascript:void(0)" class="offcanvas-link" data-target="cart-map">Карта</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    
+    <footer class="footer">footer</footer>
+
+    <!-- modals -->
+    <div class="offcanvas offcanvas_sm" id="select-address">
+        <div class="offcanvas__overlay"></div>
+        <div class="offcanvas__wrapper">
+            <button class="offcanvas__close"><svg class="sprite20"><use xlink:href="img/sprites.svg#close"></use></svg></button>
+            <div class="offcanvas__title">Выберите адрес доставки</div>
+            <div class="offcanvas__content">
+                <div class="select-adress">
+                    <div class="select-adress__list">
+                        <div class="select-adress__card">
+                            <input id="adress_1" type="radio" name="adress" class="select-adress__input" value="" checked="">
+                            <label for="adress_1" class="select-adress__label">
+                                <div class="select-adress__marker"></div>
+                                <div class="select-adress__content">
+                                    <div class="select-adress__adress">Нижний Новгород, ул. Центральный проезд Хорошевского Серебряного Бора, д. 14, кв. 18</div>
+                                    <div class="select-adress__time">Завтра с 14:00</div>
+                                </div>
+                                <div class="select-adress__control">
+                                    <button class="select-adress__edit"><svg class="sprite20"><use xlink:href="img/sprites.svg#edit"></use></svg></button>
+                                    <button class="select-adress__delete"><svg class="sprite20"><use xlink:href="img/sprites.svg#trash"></use></svg></button>
+                                </div>
+                            </label>
+                        </div>                                
+                        <div class="select-adress__card select-adress__card_no-delivery">
+                            <input id="adress_2" type="radio" name="adress" class="select-adress__input" disabled>
+                            <label for="adress_2" class="select-adress__label">
+                                <div class="select-adress__marker"></div>
+                                <div class="select-adress__content">
+                                    <div class="select-adress__adress">Нижний Новгород, ул. Центральный проезд Хорошевского Серебряного Бора, д. 14, кв. 18</div>
+                                    <div class="select-adress__time">Сюда не получится доставить</div>
+                                </div>
+                                <div class="select-adress__control">
+                                    <button class="select-adress__edit"><svg class="sprite20"><use xlink:href="img/sprites.svg#edit"></use></svg></button>
+                                    <button class="select-adress__delete"><svg class="sprite20"><use xlink:href="img/sprites.svg#trash"></use></svg></button>
+                                </div>
+                            </label>
+                        </div> 
+                        <div class="select-adress__card">
+                            <input id="adress_3" type="radio" name="adress" class="select-adress__input" value="" checked="">
+                            <label for="adress_3" class="select-adress__label">
+                                <div class="select-adress__marker"></div>
+                                <div class="select-adress__content">
+                                    <div class="select-adress__adress">Нижний Новгород, ул. Центральный проезд Хорошевского Серебряного Бора, д. 14, кв. 18</div>
+                                    <div class="select-adress__time">Завтра с 14:00</div>
+                                </div>
+                                <div class="select-adress__control">
+                                    <button class="select-adress__edit"><svg class="sprite20"><use xlink:href="img/sprites.svg#edit"></use></svg></button>
+                                    <button class="select-adress__delete"><svg class="sprite20"><use xlink:href="img/sprites.svg#trash"></use></svg></button>
+                                </div>
+                            </label>
+                        </div>                                 
+                    </div>
+                    <button class="select-adress__add">
+                        <svg class="sprite20"><use xlink:href="img/sprites.svg#plus"></use></svg>
+                        <span>Добавить новый адрес </span>
+                    </button>
+                    <button class="select-adress__apply">Привезти сюда</button>
+                </div>                
+            </div>
+        </div>        
+    </div>
+
+    <div class="offcanvas offcanvas__full" id="cart-map">
+        <div class="offcanvas__overlay"></div>
+        <div class="offcanvas__wrapper">
+            <button class="offcanvas__close offcanvas__close_list"><svg class="sprite20"><use xlink:href="img/sprites.svg#close"></use></svg></button>
+            <div class="cart-map">
+                <div class="cart-map__content">
+                    <button class="cart-map__content-close"><svg class="sprite20"><use xlink:href="img/sprites.svg#close"></use></svg></button>
+                    <div class="cart-map__top">
+                        <div class="cart-map__title">Выбор ПВЗ</div>
+                        <div class="cart-map__search">
+                            <input type="text" name="search" class="cart-map__search-input" placeholder="Поиск" >
+                            <button class="cart-map__search-btn"></button>
+                        </div>
+                        <div class="cart-map__options">
+                            <div class="cart-checkbox">
+                                <input type="checkbox" id="fitting" class="cart-checkbox__input">
+                                <label for="fitting" class="cart-checkbox__label">Примерка</label>
+                            </div>
+                            <div class="cart-checkbox">
+                                <input type="checkbox" id="receiving" class="cart-checkbox__input">
+                                <label for="receiving" class="cart-checkbox__label">Оплата при получении</label>
+                            </div> 
+                        </div>
+                        <div class="cart-map__info">456 пунктов в г. Москва</div> 
+                    </div>
+
+                    <div class="cart-map__goto-map goto-map">
+                        <div class="goto-map__inner">
+                            <button class="goto-map__btn">На карте</button>
+                        </div>
+                    </div> 
+
+                    <div class="cart-map__list">
+                        <div class="change-card change-card_point" data-point="1">
+                            <input id="pickup_3" type="radio" name="pickup" class="change-card__input" value="" checked="">
+                            <label for="pickup_3" class="change-card__label">
+                                <div class="change-card__top">
+                                    <div class="change-card__name">Пункт выдачи заказов</div>
+                                    <div class="change-card__logo">
+                                        <img src="img/cdek_logo.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="change-card__middle">
+                                    <div class="change-card__adress">ул. Малая Семеновская, 28, пав. 51, ТРЦ "Персей"</div>
+                                    <div class="change-card__contacts">
+                                        <div class="change-card__mode">Пн-Вс с 10:00 до 22:00</div>
+                                        <div class="change-card__phone">+7 (909) 950-39-06</div>
+                                    </div>
+                                </div>
+                                <div class="change-card__bottom">
+                                    <div class="change-card__option change-card__option_fitting">Примерочная</div>
+                                    <div class="change-card__option change-card__option_card">Оплата картой</div>
+                                    <div class="change-card__option change-card__option_time">Возврат в течении 14 дней</div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="change-card change-card_point" data-point="2">
+                            <input id="pickup_4" type="radio" name="pickup" class="change-card__input" value="" checked="">
+                            <label for="pickup_4" class="change-card__label">
+                                <div class="change-card__top">
+                                    <div class="change-card__name">Пункт выдачи заказов</div>
+                                    <div class="change-card__logo">
+                                        <img src="img/boxberry_logo.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="change-card__middle">
+                                    <div class="change-card__adress">ул. Малая Семеновская, 28, пав. 51, ТРЦ "Персей"</div>
+                                    <div class="change-card__contacts">
+                                        <div class="change-card__mode">Пн-Вс с 10:00 до 22:00</div>
+                                        <div class="change-card__phone">+7 (909) 950-39-06</div>
+                                    </div>
+                                </div>
+                                <div class="change-card__bottom">
+                                    <div class="change-card__option change-card__option_fitting">Примерочная</div>
+                                    <div class="change-card__option change-card__option_card">Оплата картой</div>
+                                    <div class="change-card__option change-card__option_time">Возврат в течении 14 дней</div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="change-card change-card_point" data-point="3">
+                            <input id="pickup_1" type="radio" name="pickup" class="change-card__input" value="" checked="">
+                            <label for="pickup_1" class="change-card__label">
+                                <div class="change-card__top">
+                                    <div class="change-card__name">Пункт выдачи заказов</div>
+                                    <div class="change-card__logo">
+                                        <img src="img/cdek_logo.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="change-card__middle">
+                                    <div class="change-card__adress">ул. Малая Семеновская, 28, пав. 51, ТРЦ "Персей"</div>
+                                    <div class="change-card__contacts">
+                                        <div class="change-card__mode">Пн-Вс с 10:00 до 22:00</div>
+                                        <div class="change-card__phone">+7 (909) 950-39-06</div>
+                                    </div>
+                                </div>
+                                <div class="change-card__bottom">
+                                    <div class="change-card__option change-card__option_fitting">Примерочная</div>
+                                    <div class="change-card__option change-card__option_card">Оплата картой</div>
+                                    <div class="change-card__option change-card__option_time">Возврат в течении 14 дней</div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="change-card change-card_point" data-point="4">
+                            <input id="pickup_2" type="radio" name="pickup" class="change-card__input" value="" checked="">
+                            <label for="pickup_2" class="change-card__label">
+                                <div class="change-card__top">
+                                    <div class="change-card__name">Пункт выдачи заказов</div>
+                                    <div class="change-card__logo">
+                                        <img src="img/boxberry_logo.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="change-card__middle">
+                                    <div class="change-card__adress">ул. Малая Семеновская, 28, пав. 51, ТРЦ "Персей"</div>
+                                    <div class="change-card__contacts">
+                                        <div class="change-card__mode">Пн-Вс с 10:00 до 22:00</div>
+                                        <div class="change-card__phone">+7 (909) 950-39-06</div>
+                                    </div>
+                                </div>
+                                <div class="change-card__bottom">
+                                    <div class="change-card__option change-card__option_fitting">Примерочная</div>
+                                    <div class="change-card__option change-card__option_card">Оплата картой</div>
+                                    <div class="change-card__option change-card__option_time">Возврат в течении 14 дней</div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="cart-map__bottom">
+                        <button class="select-adress__apply cart-map__btn">Доставить сюда</button>
+                    </div>
+                </div>
+                <div class="cart-map__map map">
+                    <div class="map__header">
+                        <button class="map__goto-list">Списком</button>
+                        <div class="map__info">456 пунктов в г. Москва</div>
+                    </div>
+                    <div class="map__options">
+                        <div class="map-checkbox">
+                            <input type="checkbox" id="fitting_map" class="map-checkbox__input">
+                            <label for="fitting_map" class="map-checkbox__label">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.66604 9.83301C10.5597 9.83301 11.1177 9.82812 11.585 9.96973L11.7725 10.0332C12.6944 10.3769 13.4085 11.1323 13.6963 12.0811L13.7432 12.2607C13.8371 12.6928 13.833 13.2178 13.833 14C13.833 14.276 13.609 14.4998 13.333 14.5C13.057 14.4998 12.833 14.276 12.833 14C12.833 13.1539 12.8285 12.763 12.7686 12.4844L12.7393 12.3711C12.5423 11.7219 12.0538 11.2048 11.4229 10.9697L11.2949 10.9268C11.0053 10.839 10.6324 10.833 9.66604 10.833H6.33303C5.48748 10.833 5.09594 10.8376 4.8174 10.8975L4.70412 10.9268C4.05506 11.1238 3.53786 11.6124 3.30276 12.2432L3.25979 12.3711C3.17194 12.6607 3.16604 13.0333 3.16604 14C3.16604 14.2761 2.94218 14.5 2.66604 14.5C2.39005 14.4998 2.16604 14.276 2.16604 14C2.16604 13.1062 2.16105 12.5484 2.30276 12.0811L2.36526 11.8936C2.70886 10.9717 3.46459 10.2577 4.41311 9.96973L4.59377 9.92285C5.02576 9.829 5.55118 9.83301 6.33303 9.83301H9.66604ZM7.99904 1.5C9.93204 1.5 11.499 3.067 11.499 5C11.499 6.933 9.93204 8.5 7.99904 8.5C6.06635 8.49964 4.49904 6.93278 4.49904 5C4.49904 3.06722 6.06635 1.50036 7.99904 1.5ZM7.99904 2.5C6.61864 2.50036 5.49904 3.61951 5.49904 5C5.49904 6.38049 6.61864 7.49964 7.99904 7.5C9.37976 7.5 10.499 6.38071 10.499 5C10.499 3.61929 9.37976 2.5 7.99904 2.5Z" fill="#3F3F46"/>
+                                </svg>
+                                <span>Примерка</span>
+                            </label>
+                        </div>
+                        <div class="map-checkbox">
+                            <input type="checkbox" id="receiving_map" class="map-checkbox__input">
+                            <label for="receiving_map" class="map-checkbox__label">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_5612_17944)">
+                                        <path d="M11.334 2.16602C13.0145 2.16605 13.9705 2.42313 14.4902 2.65234L14.6143 2.71777C14.8815 2.88825 15.009 3.16353 15.0674 3.32227C15.1055 3.4259 15.1285 3.52133 15.1426 3.58984C15.1497 3.62453 15.1549 3.65492 15.1582 3.67676C15.1598 3.68715 15.1612 3.69618 15.1621 3.70312C15.1626 3.70658 15.1628 3.71035 15.1631 3.71289C15.1632 3.71389 15.1639 3.71499 15.1641 3.71582V3.71875L15.167 3.77441V10.9404C15.167 11.2355 15.1679 11.4825 15.1553 11.6738C15.1464 11.8073 15.1289 11.9641 15.0752 12.1123L15.0088 12.2568C14.9443 12.3674 14.8632 12.478 14.748 12.5732C14.6906 12.6207 14.6305 12.6587 14.5703 12.6904L14.3877 12.7695C14.1773 12.8435 13.9378 12.8207 13.75 12.7959C13.6446 12.782 13.5228 12.7621 13.3857 12.7373L12.9277 12.6504C12.4746 12.5633 11.9362 12.499 11.334 12.499C10.4266 12.499 9.50919 12.8015 8.39746 13.1436C7.31138 13.4777 6.08162 13.833 4.66699 13.833C3.19658 13.833 2.28066 13.6363 1.72656 13.4336L1.51074 13.3467C1.48442 13.3351 1.42667 13.3098 1.3623 13.2676C1.33139 13.2473 1.30192 13.226 1.27441 13.2031L1.19531 13.1318C1.12618 13.0659 1.06457 12.9775 1.02832 12.9219C1.01017 12.894 0.986486 12.8567 0.963867 12.8154L0.90332 12.6836C0.868077 12.5859 0.850297 12.5036 0.841797 12.4297L0.833984 12.2246V5.05859L0.834961 4.65234C0.836488 4.52986 0.840325 4.41986 0.84668 4.32422C0.858525 4.14629 0.88452 3.92839 0.993164 3.74219L1.08105 3.61816C1.17621 3.50468 1.28621 3.42225 1.35156 3.37695C1.40358 3.34092 1.45183 3.312 1.48633 3.29199C1.50357 3.282 1.51838 3.2735 1.5293 3.26758C1.5345 3.26478 1.53947 3.26259 1.54297 3.26074C1.54465 3.25981 1.54663 3.25845 1.54785 3.25781L1.5498 3.25684H1.55078C1.57078 3.24659 1.59209 3.23695 1.61328 3.22949C1.82378 3.15555 2.06314 3.1783 2.25098 3.20312C2.46181 3.23101 2.73669 3.28397 3.07324 3.34863L3.42871 3.4082C3.79948 3.46295 4.2153 3.49901 4.66699 3.49902C5.57435 3.49895 6.49175 3.19657 7.60352 2.85449C8.68962 2.52031 9.91933 2.16602 11.334 2.16602ZM11.334 3.16602C10.0823 3.16602 8.97781 3.47814 7.89746 3.81055C6.84286 4.13504 5.75935 4.49895 4.66699 4.49902C4.16254 4.49901 3.69798 4.45868 3.2832 4.39746L2.88477 4.33008C2.53534 4.26294 2.29493 4.21746 2.12012 4.19434C2.03221 4.18272 1.97957 4.17933 1.95215 4.17871C1.94257 4.18481 1.93223 4.19204 1.92188 4.19922C1.89719 4.21633 1.87538 4.23237 1.86035 4.24609C1.85633 4.26594 1.85009 4.31009 1.84473 4.39062C1.83474 4.54093 1.83398 4.74854 1.83398 5.05859V12.292C1.83435 12.3064 1.83557 12.3134 1.83594 12.3164C1.83614 12.3182 1.8365 12.3196 1.83691 12.3213C1.83734 12.323 1.83787 12.3269 1.83984 12.333L1.84082 12.334C1.8466 12.3445 1.85577 12.359 1.86621 12.375C1.87668 12.3911 1.88624 12.4055 1.89355 12.415C1.90038 12.4214 1.90537 12.4263 1.90918 12.4297L2.07031 12.4941C2.48737 12.6467 3.28088 12.833 4.66699 12.833C5.91864 12.833 7.02319 12.5209 8.10352 12.1885C9.15816 11.864 10.2416 11.499 11.334 11.499C12.0067 11.499 12.6086 11.5704 13.1162 11.668L13.5645 11.7529C13.6898 11.7756 13.7936 11.7931 13.8809 11.8047C14.0003 11.8205 14.0546 11.8193 14.0693 11.8193C14.1054 11.8057 14.1134 11.8001 14.1113 11.8018C14.1147 11.798 14.1228 11.7862 14.1377 11.7617C14.1407 11.7485 14.1508 11.7047 14.1572 11.6084C14.1672 11.4581 14.167 11.2503 14.167 10.9404V3.81055C14.166 3.80493 14.1646 3.79823 14.1631 3.79102C14.1561 3.75709 14.1452 3.71232 14.1289 3.66797C14.1026 3.59659 14.0797 3.56931 14.0742 3.5625C13.7092 3.40412 12.8999 3.16605 11.334 3.16602ZM4.00098 6.83301C4.27671 6.83336 4.5008 7.05723 4.50098 7.33301V9.99902C4.50098 10.275 4.27682 10.4987 4.00098 10.499C3.72483 10.499 3.50098 10.2752 3.50098 9.99902V7.33301C3.50115 7.05701 3.72494 6.83301 4.00098 6.83301ZM8.00098 5.83301C9.19708 5.83336 10.1666 6.80292 10.167 7.99902C10.167 9.19542 9.1973 10.1657 8.00098 10.166C6.80436 10.166 5.83398 9.19564 5.83398 7.99902C5.83433 6.8027 6.80458 5.83301 8.00098 5.83301ZM8.00098 6.83301C7.35686 6.83301 6.83433 7.35499 6.83398 7.99902C6.83398 8.64336 7.35664 9.16602 8.00098 9.16602C8.64501 9.16567 9.16699 8.64314 9.16699 7.99902C9.16664 7.35521 8.6448 6.83336 8.00098 6.83301ZM12.001 5.49902C12.2766 5.49937 12.5006 5.72339 12.501 5.99902V8.66602C12.501 8.94194 12.2768 9.16567 12.001 9.16602C11.7248 9.16602 11.501 8.94216 11.501 8.66602V5.99902C11.5013 5.72318 11.7251 5.49902 12.001 5.49902Z" fill="#3F3F46"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_5612_17944">
+                                            <rect width="16" height="16" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <span>Оплата при получении</span>
+                            </label>
+                        </div> 
+                    </div>
+                    <div class="cart-map__marker" data-marker="1" style="top: 20%;left: 40%;"></div>
+                    <div class="cart-map__marker" data-marker="2" style="top: 40%;left: 20%;"></div>
+                    <div class="cart-map__marker" data-marker="3" style="top: 60%;left: 30%;"></div>
+                    <div class="cart-map__marker" data-marker="4" style="top: 90%;left: 10%;"></div>
+                    <div style="position:relative;overflow:hidden;height:100%;"><a href="https://yandex.ru/maps/213/moscow/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Москва</a><a href="https://yandex.ru/maps/213/moscow/?ll=37.617700%2C55.755863&utm_medium=mapframe&utm_source=maps&z=10" style="color:#eee;font-size:12px;position:absolute;top:14px;">Москва — Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/?ll=37.617700%2C55.755863&z=10" width="100%" height="100%" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+                </div>
+            </div>
+        </div>        
+    </div>
+    <!-- end modals -->
+
+    <script src="js/script.js"></script>
+</body>
+</html>
