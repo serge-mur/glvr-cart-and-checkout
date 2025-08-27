@@ -1,3 +1,5 @@
+@import url(style.css);
+
 .cart__wrapper {
     display: grid;
     grid-template-columns: 7fr 5fr;
@@ -139,43 +141,7 @@
     display: flex;
     gap: 32px;
 }
-.cart-checkbox {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-.cart-checkbox__input {
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    border: 1px solid var(--gray1-color);
-    border-radius: 2px;
-    background-color: #fff;
-    cursor: pointer;
-    transition: background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
-    margin: 0;
-}
-.cart-checkbox__input:checked {
-    background-color: var(--gray1-color);
-    border-color: var(--gray1-color);
-    background: url('data:image/svg+xml,<svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 5L5 8.5L11 1" stroke="white"/></svg>') no-repeat center center var(--gray1-color);
-}
-.cart-checkbox__input:hover:not(:disabled) {
-    border-color: var(--gray1-color);
-}
-.cart-checkbox__input:focus {
-    outline: none;
-    border-color: var(--gray1-color);
-}
-.cart-checkbox__input:disabled {
-    filter: none;
-    opacity: 0.5;
-    cursor: not-allowed;
-}
-.cart-checkbox__input:disabled ~ .cart-checkbox__label {
-    opacity: 0.5;
-    cursor: not-allowed;
-}
+
 @media (max-width: 991px) {
     .person {
         margin-bottom: 44px;

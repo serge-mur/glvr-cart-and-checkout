@@ -6,247 +6,222 @@
     <title>New Gulliver Cart</title>
     <link rel="stylesheet" href="css/minireset.min.css">
     <link rel="stylesheet" href="fonts/stylesheet.css">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/cart.css">
 </head>
 <body>
 
     <header class="header">header</header>
-
-    <main class="cart">
-
         <div class="true-container">
-            <div class="cart__wrapper">
+            <main class="cart">
 
-                <div class="cart__main">
-                    
-                    <h1 class="cart__title">
-                        <a href="#" class="cart__title-back">
-                            <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M13 20L7 14.5L13 9" stroke="#52525B"/>
-                            </svg>
-                        </a>
-                        <span>Корзина</span>
-                    </h1>
-
-                    <div class="person__card">
-                        <form action="" class="person__form person-form">
-                            <div class="person-form__title">Авторизуйтесь, чтобы получить все скидки</div>
-                            <input type="text" name="name" class="person-form__input" placeholder="Введите телефон или e-mail *">
-                            <button class="person-form__btn">Получить код подтверждения</button>
-                        </form>
-                    </div>
-
-                    <div class="cart__empty cart-empty" style="display: none;">
-                        <div class="cart-empty__wrapper">
-                            <div class="cart-empty__title">Здесь будут отображаться <br> выбранные вами товары</div>
-                            <div class="cart-empty__subtitle">Чтобы сделать заказ, положите товар <br> в корзину и оформите покупку</div>
-                            <a href="#" class="cart-empty__link">
-                                <span>Перейти к покупкам</span>
-                                <svg class="sprite20"><use xlink:href="img/sprites.svg#arrow-right"></use></svg>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="cart__order order">
-                        <div class="order__header">
-                            <div class="order__title">
-                                <span>Состав заказа</span>
-                                <span class="order__count order__count_err">превышен на 20 товара</span>
-                            </div>
-                            <button class="order__share">
-                                <span>Поделиться корзиной</span>
-                                <svg class="sprite20"><use xlink:href="img/sprites.svg#share"></use></svg>
-                            </button>
-                        </div>
-
-                        <div class="order__products products active">
-
-                            <button class="products__header">
-                                Выбранные товары
-                            </button>
-
-                            <div class="products__wrapper">
-
-                                <div class="products__alert products__alert_info">
-                                    <svg class="products__alert-icon sprite20"><use xlink:href="img/sprites.svg#info"></use></svg>
-                                    <span class="products__alert-text">Если в заказе больше 20 товаров, примерка недоступна и нужно выкупить весь заказ или полностью отказаться от него. <a href="#"> Подробнее</a></span>
-                                </div>
-
-                                <div class="products__alert products__alert_error">
-                                    <svg class="products__alert-icon sprite20"><use xlink:href="img/sprites.svg#weight"></use></svg>
-                                    <span class="products__alert-text">Превышен лимит товаров. Оплата при получении будет недоступна. <a href="#">Отложить часть товаров</a></span>
-                                </div>  
-                                
-                                <div class="products__list">
-                                    <div class="products__item">
-                                        <div class="products__img">
-                                            <img src="img/products_img.webp" alt="">
-                                        </div>
-                                        <div class="products__title">Синий удлиненный жилет для девочки</div>
-                                        <div class="products__price price">
-                                            <div class="price__actual">1 299 р.</div>
-                                            <div class="price__old">6 699 ₽</div>
-                                        </div>                                        
-                                        <div class="products__info">
-                                            <div class="products__size">Размер: 134</div>
-                                            <div class="products__articul">APT. 12011BJC1207</div>                                                
-                                        </div>
-                                        <div class="products__count">
-                                            <button class="count__minus"><svg class="sprite20"><use xlink:href="img/sprites.svg#minus"></use></svg></button>
-                                            <div class="count__value">1 шт.</div>
-                                            <button class="count__plus"><svg class="sprite20"><use xlink:href="img/sprites.svg#plus"></use></svg></button>
-                                        </div>
-                                        <div class="products__control">
-                                            <button class="products__favorite">
-                                                <svg class="sprite20"><use xlink:href="img/sprites.svg#heart"></use></svg>    
-                                            </button>
-                                            <button class="products__trash">
-                                                <svg class="sprite20"><use xlink:href="img/sprites.svg#trash"></use></svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="products__item">
-                                        <div class="products__img">
-                                            <img src="img/products_img.webp" alt="">
-                                        </div>
-                                        <div class="products__title">Синий удлиненный жилет для девочки</div>
-                                        <div class="products__price price">
-                                            <div class="price__actual">1 299 р.</div>
-                                            <div class="price__old">6 699 ₽</div>
-                                        </div>                                        
-                                        <div class="products__info">
-                                            <div class="products__size">Размер: 134</div>
-                                            <div class="products__articul">APT. 12011BJC1207</div>                                                
-                                        </div>
-                                        <div class="products__count">
-                                            <button class="count__minus"><svg class="sprite20"><use xlink:href="img/sprites.svg#minus"></use></svg></button>
-                                            <div class="count__value">1 шт.</div>
-                                            <button class="count__plus"><svg class="sprite20"><use xlink:href="img/sprites.svg#plus"></use></svg></button>
-                                        </div>
-                                        <div class="products__control">
-                                            <button class="products__favorite">
-                                                <svg class="sprite20"><use xlink:href="img/sprites.svg#heart"></use></svg>    
-                                            </button>
-                                            <button class="products__trash">
-                                                <svg class="sprite20"><use xlink:href="img/sprites.svg#trash"></use></svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="order__products products active">
-
-                            <button class="products__header">
-                                Отложенные товары
-                            </button>
-
-                            <div class="products__wrapper">
-                               
-                                <div class="products__list">
-                                    <div class="products__item">
-                                        <div class="products__img">
-                                            <img src="img/products_img.webp" alt="">
-                                        </div>
-                                        <div class="products__title">Синий удлиненный жилет для девочки</div>
-                                        <div class="products__price price">
-                                            <div class="price__not-available">Нет в наличии</div>
-                                        </div>                                        
-                                        <div class="products__info">
-                                            <div class="products__size">Размер: 134</div>
-                                            <div class="products__articul">APT. 12011BJC1207</div>                                                
-                                        </div>
-                                        <div class="products__count">
-                                            <button class="count__minus"><svg class="sprite20"><use xlink:href="img/sprites.svg#minus"></use></svg></button>
-                                            <div class="count__value">1 шт.</div>
-                                            <button class="count__plus"><svg class="sprite20"><use xlink:href="img/sprites.svg#plus"></use></svg></button>
-                                        </div>
-                                        <div class="products__control">
-                                            <button class="products__favorite">
-                                                <svg class="sprite20"><use xlink:href="img/sprites.svg#heart"></use></svg>    
-                                            </button>
-                                            <button class="products__trash">
-                                                <svg class="sprite20"><use xlink:href="img/sprites.svg#trash"></use></svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-
+                <div class="breadcrumb">
+                    <ul class="breadcrumb__list">
+                        <li class="breadcrumb__item">
+                            <a href="#" class="breadcrumb__link">Главная</a>
+                        </li>
+                        <li class="breadcrumb__item">
+                            <span class="breadcrumb__link breadcrumb__link_active">Корзина</span>
+                        </li>
+                    </ul>
                 </div>
 
-                <div class="cart__total total">
+                <h1 class="page-title">
+                    <a href="#" class="page-title__back">
+                        <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 20L7 14.5L13 9" stroke="#52525B"/>
+                        </svg>
+                    </a>
+                    <span class="page-title__title">Корзина</span>
+                    <sup class="page-title__count">3 товара</sup>
+                </h1> 
 
-                    <div class="total__list">
-                        <div class="total__item total__item_title">
-                            <div class="total__name">Итого</div>
-                            <div class="total__value">24 657 ₽</div>
+                <div class="cart__empty cart-empty" style="display: none;">
+                    <div class="cart-empty__title">Корзина пока пуста</div>
+                    <div class="cart-empty__subtitle">Войдите, чтобы получать скидки по программе <a href="#">Gulliver Family</a></div>
+                    <div class="cart-empty__links">
+                        <a href="#" class="cart-empty__link cart-empty__link_fill">Войти</a>                        
+                        <a href="#" class="cart-empty__link">Перейти к покупкам</a>                                               
+                    </div>
+                </div>
+
+                <div class="cart__wrapper">               
+                    <div class="cart__main">
+
+                        <div class="cart__banner cart-banner">
+                            <div class="cart-banner__content">
+                                <p>Авторизуйтесь, чтобы:</p>
+                                <ul>
+                                    <li>Добавлять вещи в избранное.</li>
+                                    <li>Видеть специальные цены.</li>
+                                    <li>Сохранять товары в корзине и возвращаться позднее.</li>
+                                </ul>
+                                <a href="#" class="cart-banner__link">Войти или зарегистрироваться</a>
+                            </div>
                         </div>
-                        <div class="total__item">
-                            <div class="total__name">2 товара на сумму</div>
-                            <div class="total__value">26 157 ₽</div>
+
+                        <div class="cart__message cart-message">
+                            <button class="cart-message__close"></button>
+                            <div class="cart-message__content"><span class="cart-message__text">Теперь можно заказать больше товаров для красоты и дома.</span></div>
+                            <a href="#" class="cart-message__link">Подробнее</a>
                         </div>
-                        <div class="total__item-wrapper">
+
+                        <div class="cart__order order">
+
+                            <div class="order__header">
+                                <div class="order__control order-control">
+                                    <div class="cart-checkbox cart-checkbox_order-control">
+                                        <input type="checkbox" id="all_1" class="cart-checkbox__input">
+                                        <label for="all_1" class="cart-checkbox__label">Выбрать все</label>
+                                    </div>
+                                    <button class="order-control__button">Удалить 2</button>
+                                </div>
+                                <button class="order__share"></button>
+                            </div>
+
+                            <div class="cart__alert cart-alert">
+                                <div class="cart-alert__content"><span class="cart-alert__text">Если в заказе больше 20 товаров, примерка недоступна и нужно выкупить весь заказ или полностью отказаться от него.</span></div>
+                                <a href="#" class="cart-alert__link">Подробнее</a>
+                            </div>
+
+                            <div class="cart__alert cart-alert cart-alert_error">
+                                <div class="cart-alert__content"><span class="cart-alert__text">Превышен лимит товаров. Оплата при получении будет недоступна.</span></div>
+                            </div>
+
+                            <div class="order__products products">
+
+                                <div class="products__wrapper">
+                                    <div class="products__brand">logo</div>
+                                    <div class="products__list">
+                                        <div class="products__item">
+                                            <div class="products__img">
+                                                <img src="img/products_img.webp" alt="">
+                                            </div>
+                                            <div class="products__title">Синий удлиненный жилет для девочки</div>
+                                            <div class="products__price price">
+                                                <div class="price__actual">1 299 р.</div>
+                                                <div class="price__old">6 699 ₽</div>
+                                            </div>                                        
+                                            <div class="products__info">
+                                                <div class="products__size">Размер: 134</div>
+                                                <div class="products__articul">APT. 12011BJC1207</div>                                                
+                                            </div>
+                                            <div class="products__count">
+                                                <button class="count__minus"><svg class="sprite20"><use xlink:href="img/sprites.svg#minus"></use></svg></button>
+                                                <div class="count__value">1 шт.</div>
+                                                <button class="count__plus"><svg class="sprite20"><use xlink:href="img/sprites.svg#plus"></use></svg></button>
+                                            </div>
+                                            <div class="products__control">
+                                                <button class="products__favorite">
+                                                    <svg class="sprite20"><use xlink:href="img/sprites.svg#heart"></use></svg>    
+                                                </button>
+                                                <button class="products__trash">
+                                                    <svg class="sprite20"><use xlink:href="img/sprites.svg#trash"></use></svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="products__item">
+                                            <div class="products__img">
+                                                <img src="img/products_img.webp" alt="">
+                                            </div>
+                                            <div class="products__title">Синий удлиненный жилет для девочки</div>
+                                            <div class="products__price price">
+                                                <div class="price__actual">1 299 р.</div>
+                                                <div class="price__old">6 699 ₽</div>
+                                            </div>                                        
+                                            <div class="products__info">
+                                                <div class="products__size">Размер: 134</div>
+                                                <div class="products__articul">APT. 12011BJC1207</div>                                                
+                                            </div>
+                                            <div class="products__count">
+                                                <button class="count__minus"><svg class="sprite20"><use xlink:href="img/sprites.svg#minus"></use></svg></button>
+                                                <div class="count__value">1 шт.</div>
+                                                <button class="count__plus"><svg class="sprite20"><use xlink:href="img/sprites.svg#plus"></use></svg></button>
+                                            </div>
+                                            <div class="products__control">
+                                                <button class="products__favorite">
+                                                    <svg class="sprite20"><use xlink:href="img/sprites.svg#heart"></use></svg>    
+                                                </button>
+                                                <button class="products__trash">
+                                                    <svg class="sprite20"><use xlink:href="img/sprites.svg#trash"></use></svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            
+                        </div>
+
+                    </div>
+
+                    <div class="cart__total total">
+
+                        <div class="total__list">
+                            <div class="total__item total__item_title">
+                                <div class="total__name">Итого</div>
+                                <div class="total__value">24 657 ₽</div>
+                            </div>
                             <div class="total__item">
-                                <div class="total__name total__name-btn">Ваша скидка</div>
-                                <div class="total__value">-1 500 ₽</div>
+                                <div class="total__name">2 товара на сумму</div>
+                                <div class="total__value">26 157 ₽</div>
                             </div>
-                            <div class="total__item-content">
+                            <div class="total__item-wrapper">
                                 <div class="total__item">
-                                    <div class="total__name">Акция 1+1</div>
-                                    <div class="total__value">-1 000 ₽</div>
+                                    <div class="total__name total__name-btn">Ваша скидка</div>
+                                    <div class="total__value">-1 500 ₽</div>
                                 </div>
-                                <div class="total__item">
-                                    <div class="total__name">Авторизированный пользователь</div>
-                                    <div class="total__value">-500 ₽</div>
+                                <div class="total__item-content">
+                                    <div class="total__item">
+                                        <div class="total__name">Акция 1+1</div>
+                                        <div class="total__value">-1 000 ₽</div>
+                                    </div>
+                                    <div class="total__item">
+                                        <div class="total__name">Авторизированный пользователь</div>
+                                        <div class="total__value">-500 ₽</div>
+                                    </div>
                                 </div>
+                            </div>    
+                            <div class="total__item">
+                                <div class="total__name">Доставка</div>
+                                <div class="total__value">Бесплатно</div>
                             </div>
-                        </div>    
-                        <div class="total__item">
-                            <div class="total__name">Доставка</div>
-                            <div class="total__value">Бесплатно</div>
+                            <div class="total__item total__item_total">
+                                <div class="total__name">Итого</div>
+                                <div class="total__value">24 657 ₽</div>
+                            </div>
                         </div>
-                        <div class="total__item total__item_total">
-                            <div class="total__name">Итого</div>
-                            <div class="total__value">24 657 ₽</div>
+
+                        <div class="promocode">
+                            <input type="text" class="promocode__input" value="SALE15">
+                            <button class="promocode__btn-apply">Применить</button>
+                        </div>
+
+                        <div class="certificate">
+                            <input type="text" class="certificate__input" placeholder="Подарочный сертификат">
+                            <button class="promocode__btn-close"><svg class="sprite20"><use xlink:href="img/sprites.svg#close"></use></svg></button>
+                        </div>
+
+                        <button class="total__submit-btn" disabled>Оформить заказ</button>
+
+                        <div class="total__offer-text">
+                            Нажимая «Оформить заказ», Вы подтверждаете, что ознакомились с <a href="#">Условиями программы лояльности Gulliver Club</a>, <a href="#">Политикой Организатора программы об обработке персональных данных</a>, согласны стать участником программы лояльности и <a href="#">даете Организатору согласие на обработку Ваших персональных данных</a>.
+                        </div>
+
+                        <div style="display: flex;flex-direction: column;gap: 10px;">
+                            <p>modals</p>
+                            <!-- <a href="javascript:void(0)" class="offcanvas-link" data-target="select-address">Адресс доставки</a>                         -->
+                            <!-- <a href="javascript:void(0)" class="offcanvas-link" data-target="return-goods">Возврат товара</a> -->
+                            <a href="javascript:void(0)" class="offcanvas-link" data-target="postpone-goods">Отложить часть товаров</a>
+                            <!-- <a href="javascript:void(0)" class="offcanvas-link" data-target="cart-map">Карта</a> -->
                         </div>
                     </div>
 
-                    <div class="promocode">
-                        <input type="text" class="promocode__input" value="SALE15">
-                        <button class="promocode__btn-apply">Применить</button>
-                    </div>
-
-                    <div class="certificate">
-                        <input type="text" class="certificate__input" placeholder="Подарочный сертификат">
-                        <button class="promocode__btn-close"><svg class="sprite20"><use xlink:href="img/sprites.svg#close"></use></svg></button>
-                    </div>
-
-                    <button class="total__submit-btn" disabled>Оформить заказ</button>
-
-                    <div class="total__offer-text">
-                        Нажимая «Оформить заказ», Вы подтверждаете, что ознакомились с <a href="#">Условиями программы лояльности Gulliver Club</a>, <a href="#">Политикой Организатора программы об обработке персональных данных</a>, согласны стать участником программы лояльности и <a href="#">даете Организатору согласие на обработку Ваших персональных данных</a>.
-                    </div>
-
-                    <div style="display: flex;flex-direction: column;gap: 10px;">
-                        <p>modals</p>
-                        <!-- <a href="javascript:void(0)" class="offcanvas-link" data-target="select-address">Адресс доставки</a>                         -->
-                        <!-- <a href="javascript:void(0)" class="offcanvas-link" data-target="return-goods">Возврат товара</a> -->
-                        <a href="javascript:void(0)" class="offcanvas-link" data-target="postpone-goods">Отложить часть товаров</a>
-                        <!-- <a href="javascript:void(0)" class="offcanvas-link" data-target="cart-map">Карта</a> -->
-                    </div>
                 </div>
 
-            </div>
-        </div>
-    </main>
-    
+            </main>
+    </div>
+
     <footer class="footer">footer</footer>
 
     <!-- modals -->
@@ -336,5 +311,6 @@
     <!-- end modals -->
 
     <script src="js/script.js"></script>
+    <script src="js/cart.js"></script>
 </body>
 </html>
