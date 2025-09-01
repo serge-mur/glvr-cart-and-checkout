@@ -73,8 +73,8 @@
                             <div class="order__header">
                                 <div class="order__control order-control">
                                     <div class="cart-checkbox cart-checkbox_order-control">
-                                        <input type="checkbox" id="all_1" class="cart-checkbox__input">
-                                        <label for="all_1" class="cart-checkbox__label">Выбрать все</label>
+                                        <input type="checkbox" id="checkbox_all" class="cart-checkbox__input cart-checkbox__input_all">
+                                        <label for="checkbox_all" class="cart-checkbox__label">Выбрать все</label>
                                     </div>
                                     <button class="order-control__button">Удалить 2</button>
                                 </div>
@@ -107,7 +107,7 @@
                                     <div class="products__brand" style="display: none;">
                                         <img src="img/gulliver_logo.svg" alt="">
                                     </div>
-                                    <div class="products__list">
+                                    <div class="products__list products__list_hide-select">
 
                                         <div class="products__item">
                                             <div class="products__select">
@@ -177,6 +177,19 @@
                                                     <div class="size-select__button">Выбрать этот размер</div>
                                                 </div>
                                             </div>
+
+                                            <div class="products__delete products-delete">
+                                                <div class="products-delete__title">Товар удален из корзины</div>
+                                                <div class="products-delete__control">
+                                                    <button class="products-delete__return">Вернуть</button>
+                                                    <div class="products-delete__counter delete-counter">
+                                                        <svg class="delete-counter__circle" width="30" height="30" viewBox="0 0 30 30">
+                                                            <circle cx="15" cy="15" r="15" fill="transparent" stroke="#3F3F46" stroke-width="1" />
+                                                        </svg>
+                                                        <div class="delete-counter__counter">5</div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                         
                                         <div class="products__item">
@@ -228,6 +241,19 @@
                                                     <div class="size-select__button">Выбрать этот размер</div>
                                                 </div>
                                             </div>
+
+                                            <div class="products__delete products-delete">
+                                                <div class="products-delete__title">Товар удален из корзины</div>
+                                                <div class="products-delete__control">
+                                                    <button class="products-delete__return">Вернуть</button>
+                                                    <div class="products-delete__counter delete-counter">
+                                                        <svg class="delete-counter__circle" width="30" height="30" viewBox="0 0 30 30">
+                                                            <circle cx="15" cy="15" r="15" fill="transparent" stroke="#3F3F46" stroke-width="1" />
+                                                        </svg>
+                                                        <div class="delete-counter__counter">5</div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
 
 
@@ -277,6 +303,19 @@
 
                                             <button class="products__favorite"></button>
 
+                                            <div class="products__delete products-delete">
+                                                <div class="products-delete__title">Товар удален из корзины</div>
+                                                <div class="products-delete__control">
+                                                    <button class="products-delete__return">Вернуть</button>
+                                                    <div class="products-delete__counter delete-counter">
+                                                        <svg class="delete-counter__circle" width="30" height="30" viewBox="0 0 30 30">
+                                                            <circle cx="15" cy="15" r="15" fill="transparent" stroke="#3F3F46" stroke-width="1" />
+                                                        </svg>
+                                                        <div class="delete-counter__counter">5</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                         </div>
                                         
                                         <div class="products__item">
@@ -300,6 +339,18 @@
 
                                             <button class="products__favorite products__favorite_active"></button>
 
+                                            <div class="products__delete products-delete">
+                                                <div class="products-delete__title">Товар удален из корзины</div>
+                                                <div class="products-delete__control">
+                                                    <button class="products-delete__return">Вернуть</button>
+                                                    <div class="products-delete__counter delete-counter">
+                                                        <svg class="delete-counter__circle" width="30" height="30" viewBox="0 0 30 30">
+                                                            <circle cx="15" cy="15" r="15" fill="transparent" stroke="#3F3F46" stroke-width="1" />
+                                                        </svg>
+                                                        <div class="delete-counter__counter"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
 
 
@@ -347,10 +398,11 @@
 
                         <div class="total__off-points off-points">
                             <div class="off-points__control">
-                                <div class="off-points__checkbox">
-                                    <input type="checkbox" id="all_1" class="off-points__input">
-                                    <label for="all_1" class="off-points__label">Списать баллы</label>
-                                </div> 
+                                <label class="off-points__checkbox">
+                                    <input type="checkbox" class="off-points__input">
+                                    <span class="off-points__slider"></span>
+                                </label>
+                                <span class="off-points__title">Списать баллы</span>
                                 <button class="total__info-button"></button>                               
                             </div>
                             <div class="off-points__value">– 234</div>
@@ -368,7 +420,7 @@
                         <div class="total__awarded-points awarded-points">
                             <div class="awarded-points__control">
                                 <div class="awarded-points__title">Будет начислено баллов</div>
-                                <div class="total__info-button"></div>
+                                <button class="total__info-button"></button>
                             </div>
                             <div class="awarded-points__value">+ 549</div>
                         </div>
